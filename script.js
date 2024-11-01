@@ -758,16 +758,16 @@ innan den är deklarerad. Bra kodhygien blir inte hoisted
 
 //Om jag vill avrunda ett tal
 
-//flyt-tal
-Math.round(13.37); // round avrundar ett flytande tal neråt, över ".5" så blir det alltid uppåt
-Math.floor(13.5);// floor avrundar alltid ett flytande tal nedåt
-Math.ceil(13.3);// ceil avrundar alltid ett flytande tal uppåt
-//Math.random();// random ger olika tal mellan olika variabler, () tom ger tal mellan 0,0000-9,9999
-//Tar man Math.random() x 10; får man tal mellan 0,0000 - 9,9999
+// //flyt-tal
+// Math.round(13.37); // round avrundar ett flytande tal neråt, över ".5" så blir det alltid uppåt
+// Math.floor(13.5);// floor avrundar alltid ett flytande tal nedåt
+// Math.ceil(13.3);// ceil avrundar alltid ett flytande tal uppåt
+// //Math.random();// random ger olika tal mellan olika variabler, () tom ger tal mellan 0,0000-9,9999
+// //Tar man Math.random() x 10; får man tal mellan 0,0000 - 9,9999
 
-// ger random numbers mellan 0,0001 och 9,999
-const floatBetweenZeroAndAlmostTen = Math.random() * 10;
-const integerBetweenZeroAndAlmostTen = Math.round(floatBetweenZeroAndAlmostTen);
+// // ger random numbers mellan 0,0001 och 9,999
+// const floatBetweenZeroAndAlmostTen = Math.random() * 10;
+// const integerBetweenZeroAndAlmostTen = Math.round(floatBetweenZeroAndAlmostTen);
 
 //Only get number between 1-10
 //const integerBetweenOneAndTen = Math.ceil(floatBetweenZeroAndAlmostTen);
@@ -794,16 +794,16 @@ const integerBetweenZeroAndAlmostTen = Math.round(floatBetweenZeroAndAlmostTen);
 
 // Generate a randome number between 1-20 
 // Detta kan vi kopiera till vår uppgift på måndag
-const getRandomNumber = (max = 10) => { // ger den en parameter vilket för att man kan ge den ett värde när amn kallar på den
-    return Math.floor(Math.random() * max) + 1; // Man kan bara returnera en sak, istället för att skriva * 20 så kan man göra en parameter
-}
+// const getRandomNumber = (max = 10) => { // ger den en parameter vilket för att man kan ge den ett värde när amn kallar på den
+//     return Math.floor(Math.random() * max) + 1; // Man kan bara returnera en sak, istället för att skriva * 20 så kan man göra en parameter
+// }
 
-let numbers = [];
-for (let i = 0; i < 50; i++) {
-    numbers.push(getRandomNumber(30)); //anropar funktionen, och ger den 20 som indata
-}
+// let numbers = [];
+// for (let i = 0; i < 50; i++) {
+//     numbers.push(getRandomNumber(30)); //anropar funktionen, och ger den 20 som indata
+// }
 
-console.log("Numbers:", numbers.join(", "));
+// console.log("Numbers:", numbers.join(", "));
 
 // // Generate a randome number between 1-50 
 // const getRandomNumber = () => { // Ändra här för att fixa uppgiften
@@ -817,3 +817,11 @@ console.log("Numbers:", numbers.join(", "));
 
 // console.log("Numbers:", numbers.join(", "));
 
+//Scare the nice user, gör en prompt och sedan en alert
+let username = prompt("Please enter your name","Default i rutan");
+
+if (!username) {      
+username = "boring person";
+}
+
+alert(`Boo ${username}`);

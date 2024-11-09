@@ -1,4 +1,4 @@
-* {
+/* * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -8,4 +8,23 @@
    display: flex;
    flex-direction: column;
    align-items: center; 
+} */
+
+p.error {
+	color: green;
+}
+
+div.error {
+	color: red;
+}
+
+span.secret {
+	display: none;
+}
+
+.lol {
+	color: magenta;
+	font-size: 40rem;
+	font-style: italic;
+	font-weight: bold;
 }

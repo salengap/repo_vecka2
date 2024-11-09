@@ -818,10 +818,334 @@ innan den är deklarerad. Bra kodhygien blir inte hoisted
 // console.log("Numbers:", numbers.join(", "));
 
 //Scare the nice user, gör en prompt och sedan en alert
-let username = prompt("Please enter your name","Default i rutan");
+// let username = prompt("Please enter your name","Default i rutan");
 
-if (!username) {      
-username = "boring person";
-}
+// if (!username) {      
+// username = "boring person";
+// }
 
-alert(`Boo ${username}`);
+// alert(`Boo ${username}`);
+
+//Vecka 3
+
+// let names = ["Kalle", "Kajsa", "Joakim", "Knatte", "Fnatte"];
+// names.push("Tjatte"); //kallar på metoden push för att lägga till namn i arrayn
+
+// console.log(names);
+
+
+//ringa till vårdcentralen
+
+// const finallyTalkToAReceptionist = () => {
+//     alert("I LOVE JAVASCRIPT!");
+// }
+
+// const callClinic = (callback) => { //callback ger kliniken möjlighet att bestämma?
+
+//     for (let i = 0; i < 100000000; i++) {
+//         console.log("beep");
+//     }
+//     callback(); //denna innehåller finallyTalkToAReceptionist-värdet, och kommer efter koden så att när vi har hört beep en mijlon gånger så kommer alerten
+// }
+
+// callClinic(finallyTalkToAReceptionist); //skickar in funktionen men kallar inte på den, för det är upp till kliniken att bestämma sig för att ringa tillbaka
+
+// let students = ["Johan", "Pelle", "Börje", "Kajan", "Tiffany"];
+
+// // for (let i = 0; i < students.length; i++) {
+// //     const student = students[i];
+// //     console.log(`Name of student ${i} is ${student}`);
+// // }
+
+// // console.log("thats all");
+
+// students.push("Itzak");
+
+// students.forEach((student) => { //detta är en callback, kan också lägga funktionen i callbacken i en separat variabel - det är bra om man vill använda funktionen flera gånger
+// console.log("Student: ", student)
+// })
+
+// const fluffles = [
+//     "Mr Fluffles",      // 0 name
+//     3,                  // 1 age
+//     "Bengt",            // 2 owner
+//     "Annoy people",     // 3 hobbies
+//     "Cat"               // 4 species
+// ];
+
+// const captainCat = [
+//     "Captain Cat",      // 0 name
+//     "Cat",              // 1 species
+//     "9",                // 2 age
+//     "Agda",             // 3 owner
+//     "HIIT"              // 4 hobbies
+// ]
+
+// const showPetInfo = (pet) => {
+// console.log(`${pet[0]} is a ${pet[4]} of ${pet[1]} years old, his owners name is ${pet[2]} and his hobbies is ta ${pet[3]}`);
+// }
+
+// showPetInfo(fluffles);
+
+// /* Arrayer är index-based, alltså beroende av ordningen på listan, den andra kommer inte bli lika bra i console.log:en */
+
+//Hans lösning på uppgiften, kolla på repot
+
+// // Generate a random number between 1 and `max` (default 10)
+// const getRandomNumber = (max = 10) => {
+// 	return Math.floor( Math.random() * max ) + 1;
+// }
+
+
+// let attempts = 0;
+// let continueGame = true;
+// let exitGame = false;
+// let numberToGuess = getRandomNumber();
+
+
+// // while (true) {
+
+// // 	if(!exitgame) {
+// // 	continue;
+// // 	}
+
+// 		while (continueGame) {
+
+// 			let guess = Number(prompt("Guess for a number between 1-10, or write 0 to end the game","Write your guess here"));
+
+// 			//Attempts ökar varje gång en loop görs
+// 			// attempts++;	
+
+// 			if (guess === numberToGuess) {
+// 				alert(`Congratulations you guessed right! The number of attempts were ${attempts}.`); // Meddelande som visas om man har gissat rätt
+//                 continueGame = false;
+//                 attempts++;
+
+//                 //get a new number to guess
+//                 numberToGuess = getRandomNumber(); //när du har svarat rätt, ge den ett nytt nummer och 0 försök
+//                 attempts = 0;
+
+//             } else if ( guess === 0) {    
+// 				alert("End of game");  // Meddelande som visas om spelet har avslutats
+// 				exitGame++;
+//                 attempts++;
+// 				continueGame = false;
+// 			} else if (guess > numberToGuess) {
+// 				alert("Too high, try again"); // Meddelande som visas om man gissat för högt, men inte skrivit 0 och får gissa igen
+
+// 			} else if (guess < numberToGuess) {
+// 				alert("Too low, try again"); // Meddelande som visas om man gissat för lågt, men inte skrivit 0 och får gissa igen
+// 			} else {
+//                 alert("Not a number, try again")
+//             }
+// 		}
+
+// let email = 'maria@gmail.com';
+// let index = email.indexOf('@');
+
+// console.log(index);
+
+// let radius = 10; 		// radien på en cirkel är 10
+// const pi = 3.14; 		// konstanten är samma som pi
+// console.log(radius, pi);	// ser ut som nummer i konsolen
+
+// const paras = document.querySelectorAll('p');
+
+// paras.forEach(paras => {
+// console.log(paras.innerText);
+// if (paras.innerText.includes('error')){
+// paras.setAttribute('class', 'error');
+// } else if (paras.innerText.includes('success')){
+// paras.setAttribute('class', 'success');
+// }
+// })
+
+// let result = String(50);
+
+// console.log(result, typeof result); 
+
+// let result = Boolean(100);
+// console.log(result, typeof result);
+
+
+//Primitiva datatyper
+
+
+
+// let name1 = "Johan";
+// let name2 = name1;
+
+// name1 = "Pelle"; // detta ändrar inte det andra värdet name2, eftersom när name2 körs så innehåller den Johan, sedan ändras name1 till pelle
+
+// console.log("name1:", name1);
+// console.log("name2:", name2);
+
+// //referensdatatyper (arrayer och objects) kopieras inte via värde utan via referens
+
+// const barksby = {
+//     name: "Mr barksby",
+// }
+
+// const littleBarksby = barksby; // en referens till samma object så littleBarksby === barksby är true 
+
+// //ändra namn på littleBarksby
+
+// littleBarksby.name = "Barksby Jr";
+
+// console.log("Barksby name:", barksby.name);
+// console.log("littleBarksby name:", littleBarksby.name);
+
+/* Båda ändras till Barskby Jr eftersom referensen är samma, det är
+bara pekaren (som pekar på referensen i the heap) som kopieras till 
+the stack, inte själva värdet */
+
+//Arrays are also copied by reference
+
+// const names = ["Johan", "Pelle"];
+// const friends = ["Johan", "Pelle"];
+
+// console.log(names === friends) //false, de har olika innehåll och namn
+
+// //Om man istället gör så här:
+// const names = ["Johan", "Pelle"];
+// const friends = names;
+
+
+// friends.push("Agda");
+// console.log("names:", names);
+// console.log("friends:", friends);
+// console.log("Is names and friends the same?", names === friends) //true, nu är de samma för att friends har en referens till names värde
+
+//Primitive Data Types are passed by values ("skickas in baserat på sitt värde")
+
+// const happyBirthday = (name, age) => {
+// age = age +1;
+// console.log(`Happy Birthday ${name}! You are now ${age} years old.`);
+// }
+
+// let pelle_name = "Pelle";
+// let pelle_age = 2;
+
+// happyBirthday(pelle_name, pelle_age); //här är pelle 3
+
+// console.log(" Pelles age outside of function: ", pelle_age); //Strängar och tal är primitiva datatyper, därför sparas värdet som variabler inte referenser
+
+// //Reference data types (like objects and arrays) are passed by reference
+// const moewJr = {
+//     name: "Meow Jr",
+//     age: 1,
+// }
+
+
+// const happyPetBirthday = (pet) => {
+//     pet.age = pet.age +1;
+//     console.log(`Happy Birthday ${pet.name}! You are now ${pet.age} years old.`);
+// }
+
+// console.log("Meow Jr age outside of function: ", moewJr.age);
+// happyPetBirthday(moewJr);
+// console.log("Meow Jr age after birthday: ", moewJr.age);
+
+//const pets = [barskby, meowJr];
+
+// const students = [{name: "johan", level: "1337"}, {name: "Newbie", level: "-1"}];
+// const newbie = students[1];
+
+// newbie.level = 2;
+
+// console.log(students);
+
+// //Hämta olika element i DOM-hierarkin
+// const firstLink = document.querySelector("#link-1"); //Sparar en pekare till elementet "#link-1"
+
+// // Get the element's parent
+// const firstLinkParent = firstLink.parentElement;
+
+// // Get the parent's next sibling
+// const firstLinkParentNextSibling = firstLinkParent.nextElementSibling;
+
+// //Get the first paragraph on the page
+// const firstParagraph = document.querySelector("p");
+
+// //Se innehåll i paragrafen, aningen
+// console.log(firstParagraph.innerHTML);
+
+// //eller
+// console.log(firstParagraph.innerText);
+
+// //Get the first paragraph with error-class on the page
+// let firstErrorParagraph = document.querySelector("p.error"); //Finns två element med klassen error så vi måste säga att det är den första paragrafen med class = error
+
+// console.log(firstErrorParagraph.innerHTML); // får alla "strong"-taggar också
+
+// console.log(firstErrorParagraph.innerText); //får bara text utan taggar
+
+// //Change the content of an element
+// firstParagraph.innerText = "Look mom my first paragraph!"; // Ändrar på websidan, men inte i html-koden eller i consolen
+// firstParagraph.innerText += " Oh i forgot this!"; //lägger till text
+
+// const msg = "Hello";
+// //Hämta alert med klass
+// const alertEl = document.querySelector(".alert"); //variabeln döps som "en referens till ett element"
+
+// console.log("alertEl:", alertEl);
+// console.log("alertEl innerHTML; ",alertEl.innerHTML); // Här ser man span-taggarna
+// console.log("alertEl innerHTML; ",alertEl.innerText); //Här ser man inte texten som är i span-taggen i HTML-koden, bara det som visas i webbläsaren
+// console.log("alertEl innerHTML; ",alertEl.textContent); // Visar allt textcontent utan taggarna
+
+// //change content
+// alertEl.innerText = "Such error, much danger, very fail";
+// alertEl.innerText = "Such <strong>error</strong>, much danger, very fail"; //Fetstilar inte texten
+
+// //say hi to the user
+// const h2El = document.querySelector("h2#greetings");
+// const username = prompt("What are my name?");
+// console.log("hello", username);
+// //h2El.innerHTML = "Hello", username; //BIG NO, NO! m någon är lite hacker och klistrar in lite html-kod så kan hela utseendet ändras
+// h2El.innerText = "Hello", username; //Därför är detta bättre
+
+// const linkListEl = document.querySelector("ul");
+// console.log("linkListEl: ", linkListEl);
+// console.log("linkListEl's children: ", linkListEl.children); //får ut en HTML.collection som inte har `.forEach()`
+// // - method but we can access the children using square-bracket (index) notation
+
+// //loopa över en HTMLCollection
+// for(let i = 0; i < linkListEl.children.length; i++) {
+//     console.log(`child ${i}`, linkListEl.children[i]);
+// }
+
+// //Om vi vill använda .forEach så måste vi först konvertera HTMLCollection till en riktig array
+// const liEls = Array.from(linkListEl.children); //får tillbaka en array
+
+//ELLER, så kan vi använda
+//const linkListEl2 = document.querySelectorAll("div.error").forEach; //.querySelectorAll har .forEach, till skillnad från .querySelector 
+
+//const linkListEl2 = document.querySelectorAll("ul > li"); //väljer alla li i ul
+
+//GET and SET attributes
+// const memeEl = document.querySelectorAll("li"); // samma sak här, men man får alla li-taggar i hela dokumentet
+// const imgSrc = memeEl.getAttribute("src");
+// memeEl.setAttribute("alt", "LOL"); //ändrar alt i en src-tag till LOL
+
+// const btnPopupEl = document.querySelector("button");
+// console.log("Such button text:", btnPopupEl.innerText);
+
+// //eventListener, ett event sker när vi klickar på knappen, i parentesen (vilket event vill jag lyssna på? + att man lägger till ett event som är en array-function)
+// btnPopupEl.addEventListener("click", () => {
+//     console.log("Event listener is being called"); //Event-based code, det kommer inte synas förrän man har tryckt på knappen
+//     alert("stop it, that ticles!!")
+// });
+
+// console.log("After adding event-listener")
+
+const btnSayHiEl = document.querySelector("#btnSayHi");
+const inputNameEl = document.querySelector("#inputName");
+const username = document.querySelector("#inputName").value;
+
+btnSayHiEl.addEventListener("click", () => {
+    const username = inputNameEl.value;
+
+    alert(`Hi ${username}`);
+})
+
+//inputNameEl.value = "Hej"; // sätter ett värde i inputrutan
